@@ -1,0 +1,35 @@
+.Header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 91px;
+    width: 100%;
+    padding: 0 30px;
+    color: white;
+    background: var(--font-color);
+    z-index: 2;
+}
+
+.Header nav {
+    height: 100%;
+    width: 100%;
+}
+
+.Header_Nav{
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 110px;
+}
+
+.Header_Nav li {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.Header_Nav a {
+    color: white;
+}

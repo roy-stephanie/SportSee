@@ -1,0 +1,58 @@
+.NutritionCard {
+    width: 100%;
+}
+
+.NutritionCard_Content {
+    width: 80%;
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FBFBFB;
+}
+
+.NutritionCard_Content_IMG {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NutritionCard_Content_IMG > img {
+    object-fit: cover;
+}
+
+.NutritionCard_Data > p {
+    font-family: var(--font-stack);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.NutritionCard_Name {
+    color: #74798C;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .NutritionCard_Content_IMG > img {
+        width: 35px;
+        height: 35px;
+    }
+    .NutritionCard_Data > p {
+        font-size: 14px;
+        line-height: 12px;
+    }
+    .NutritionCard_Name {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .NutritionCard_Content_IMG > img {
+        width: 40px;
+        height: 40px;
+    }
+}

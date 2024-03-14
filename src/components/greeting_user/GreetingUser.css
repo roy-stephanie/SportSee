@@ -1,0 +1,15 @@
+.GreetingUser {
+    font-size: 18px;
+}
+
+.GreetingUser h1 {
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 20px;
+    font-family: var(--font-stack);
+}
+
+.GreetingUser > h1 > p > span {
+    color: #E60000;
+}

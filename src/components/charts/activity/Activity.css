@@ -1,0 +1,43 @@
+.Activity_Legend {
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Activity_Legend_Title {
+    font-family: var(--font-stack);
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.Activity_Legend_Data {
+    gap: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Activity_Legend_Icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.Activity_Tooltip {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px 15px;
+    color: white;
+    background: #E60000;
+}
+
+.Icon_1 {
+    background: #282D30;
+}
+
+.Icon_2 {
+    background: #E60000;
+}
