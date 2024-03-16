@@ -29,7 +29,7 @@ function Profil() {
       const getData = async () => {
         const userData = await getUserData(parseInt(id))
 
-        if (userData) {
+        if (!userData.apiError && !userData.userError) {
           setUserError(false)
           const userDataActivity = await getUserActivity(parseInt(id))
           const userDataPerformance = await getUserPerformance(parseInt(id));
@@ -44,7 +44,7 @@ function Profil() {
           setUserPerformance(userDataPerformanceNormalize)
           setUserSessions(userDataSessionsNormalize)
         } else {
-          setUserError(true)
+          setUserError(userData)
         }
       }
 
@@ -52,7 +52,8 @@ function Profil() {
     }
   }, [id])
 
-  if (!id || userError) return (<div className="Profil Error">Aucun profil à charger</div>)
+  if (userError.apiError) return (<div className="Profil Error">Oups l'API ne répond pas !</div>)
+  if (userError.userError) return (<div className="Profil Error">Erreur Aucun profil trouver avec l'ID : {id}</div>)
   if (id && !user) return (<div className="Profil Error"><Loader /></div>)
 
   return (
