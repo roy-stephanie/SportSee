@@ -1,3 +1,11 @@
+import { user } from '../mock/user.js'
+import { activity } from '../mock/activity.js'
+import { sessions } from '../mock/sessions.js'
+import { performance } from '../mock/performance.js'
+
+const apiHost = process.env.REACT_APP_API
+const mock = process.env.REACT_APP_MOCK_DATA === "true"
+
 /**
  * Perform a fetch GET request and handle errors.
  *
@@ -33,7 +41,10 @@ function handleFetchError(error) {
  * @returns {Promise<any>} - A promise object represents the user data.
  */
 export async function getUserData(userId) {
-  return fetchGet(`http://localhost:3000/user/${userId}`)
+  if (mock) {
+    return user
+  }
+  return fetchGet(`${apiHost}/user/${userId}`)
 }
 
 /**
@@ -43,7 +54,10 @@ export async function getUserData(userId) {
  * @returns {Promise<any>} - A promise object represents the user's activity data.
  */
 export async function getUserActivity(userId) {
-  return fetchGet(`http://localhost:3000/user/${userId}/activity`)
+  if (mock) {
+    return activity
+  }
+  return fetchGet(`${apiHost}/user/${userId}/activity`)
 }
 
 /**
@@ -53,7 +67,10 @@ export async function getUserActivity(userId) {
  * @returns {Promise<any>} - A promise object represents the user's average sessions data.
  */
 export async function getUserAverageSessions(userId) {
-  return fetchGet(`http://localhost:3000/user/${userId}/average-sessions`)
+  if (mock) {
+    return sessions
+  }
+  return fetchGet(`${apiHost}/user/${userId}/average-sessions`)
 }
 
 /**
@@ -63,5 +80,8 @@ export async function getUserAverageSessions(userId) {
  * @returns {Promise<any>} - A promise object represents the user's performance data.
  */
 export async function getUserPerformance(userId) {
-  return fetchGet(`http://localhost:3000/user/${userId}/performance`)
+  if (mock) {
+    return performance
+  }
+  return fetchGet(`${apiHost}/user/${userId}/performance`)
 }

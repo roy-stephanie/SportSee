@@ -52,9 +52,13 @@ function Profil() {
     }
   }, [id])
 
+ /* useEffect(() => {
+    console.log(userActivity)
+  }, [userActivity])*/
+
   if (userError.apiError) return (<div className="Profil Error">Oups l'API ne répond pas !</div>)
   if (userError.userError) return (<div className="Profil Error">Erreur Aucun profil trouver avec l'ID : {id}</div>)
-  if (id && !user) return (<div className="Profil Error"><Loader /></div>)
+  if (id && !user && !userActivity) return (<div className="Profil Error"><Loader /></div>)
 
   return (
     <>

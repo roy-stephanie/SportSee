@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<div className="Profil Error"><Logo /></div>} />
-          <Route path="profil/:id?" element={<Profil />} />
+          <Route path="profil/:id" element={<Profil />} />
           <Route path="*" element={<Error404 />} />
         </Route>
       </Routes>

@@ -28,6 +28,10 @@ To get started with this project, follow these steps:
 1. Clone the repository to your local machine.
 2. Install any necessary dependencies.
 3. Run the project locally or deploy it to your preferred hosting environment.
+4. uncomment
+```sh
+REACT_APP_MOCK_DATA=false
+```
 4. Ensure that the [API](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard) endpoints are correctly configured and accessible.
 
 ## Technologies Used
